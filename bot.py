@@ -14,6 +14,7 @@ def main():
     mybot=Updater(settings.API_KEY, use_context=True)
 
     dp=mybot.dispatcher
+    
     dp.add_handler(CommandHandler("start", greet_user))
     dp.add_handler(MessageHandler(Filters.text, talk_to_me))
     logging.info('bot started')
